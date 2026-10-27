@@ -1,0 +1,8 @@
+# To REFIT without numba/llvmlite (use if `pip install -r requirements-refit.txt` fails with "Failed building wheel for llvmlite").
+# Older PyMC + ArviZ; uses PyMC's built-in sampler (slower; needs a C compiler: `xcode-select --install` on macOS).
+# Resolves with prebuilt wheels for Intel macOS on Python 3.12, 3.13 AND 3.14, and ran `update` end to end on Python 3.12 and 3.14 on Linux
+# (not tested on macOS). Use with:  update --since 2018 --chains 2
+-r requirements.txt
+pyarrow
+pymc<5.25
+arviz<1

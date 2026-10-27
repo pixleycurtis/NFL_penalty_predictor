@@ -1,0 +1,10 @@
+# To REFIT the model (`update`). Use Python 3.11, 3.12 or 3.13 (3.12 recommended). NOT Python 3.14 -> use requirements-refit-nonumba.txt instead.
+-r requirements.txt
+pyarrow
+pymc
+arviz
+nutpie       # fast sampler: a 4-chain 1999+ refit took about 22 minutes on one CPU core
+# Intel Macs: the NEWEST numba/llvmlite have no prebuilt wheels there, so pip tries to compile LLVM and fails with
+# "Failed building wheel for llvmlite". These pins keep the last versions that do have wheels (harmless on other platforms):
+numba<0.63
+llvmlite<0.46

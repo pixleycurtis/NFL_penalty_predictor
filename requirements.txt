@@ -1,0 +1,5 @@
+# To RUN the tool (predict / week / crews) with the shipped model, this is all you need:
+numpy
+pandas
+certifi      # fixes SSL certificate errors on macOS python.org installs (used automatically as a fallback)
+pyarrow      # needed by `actual` (reads the play-by-play parquet files)
